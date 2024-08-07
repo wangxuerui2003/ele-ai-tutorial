@@ -36,7 +36,7 @@ bs = np.arange(-2,2,0.1)
 
 
 fig = plt.figure()
-ax = Axes3D(fig)
+ax = fig.add_subplot(projection='3d')
 
 ax.set_zlim(0,2)
 
