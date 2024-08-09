@@ -11,7 +11,7 @@ xs, ys = get_beans(DATASET_SIZE)
 w = 0.1
 
 # initial learning rate alpha
-alpha = 20
+alpha = 1
 
 # initial bias
 b = 0.1
@@ -65,6 +65,8 @@ for epoch in range(100):
 		w = w - alpha * dedw
 		b = b - alpha * dedb
 
+	if epoch % 10 != 0:
+		continue
 	plt.clf()
 	plt.scatter(xs, ys)
 	plt.xlim(0, 1)
